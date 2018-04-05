@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.musicapp.MainActivity">
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="117dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/playlist_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageButton
+        android:id="@+id/play_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:src="@drawable/ic_play_circle_outline_black_48dp"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/skip_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/previous_button"
+        app:layout_constraintTop_toTopOf="@+id/previous_button" />
+
+    <ImageButton
+        android:id="@+id/skip_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:src="@drawable/ic_skip_next_black_48dp"
+        android:tint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/play_button"
+        app:layout_constraintTop_toTopOf="@+id/play_button" />
+
+    <ImageButton
+        android:id="@+id/previous_button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="300dp"
+        android:background="@android:color/background_light"
+        android:src="@drawable/ic_skip_previous_black_48dp"
+        android:tint="@color/colorPrimaryDark"
+        app:layout_constraintEnd_toStartOf="@+id/play_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/albums_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:background="@android:color/background_light"
+        android:src="@drawable/ic_album_black_48dp"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintEnd_toStartOf="@+id/playlist_button"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/previous_button" />
+
+    <ImageButton
+        android:id="@+id/playlist_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="53dp"
+        android:background="@android:color/background_light"
+        android:backgroundTint="@android:color/background_light"
+        android:src="@drawable/ic_library_music_black_48dp"
+        android:tint="@color/colorPrimary"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/albums_button"
+        app:layout_constraintTop_toBottomOf="@+id/skip_button" />
+
+    <TextView
+        android:id="@+id/song_artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Artist"
+        android:textSize="@dimen/artist_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/progressBar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.65" />
+
+    <TextView
+        android:id="@+id/song_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:text="Title"
+        android:textStyle="bold"
+        android:textSize="@dimen/title_text_size"
+        app:layout_constraintBottom_toTopOf="@+id/song_artist"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
